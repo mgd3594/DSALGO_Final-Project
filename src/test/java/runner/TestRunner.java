@@ -11,11 +11,14 @@ import io.cucumber.junit.Cucumber;
 glue= {"stepDefinitions","newalgoutilities"},
 monochrome=true,
 dryRun=false,
-
-plugin={"pretty","html:target/htmlReports/report.html",
+plugin= {"pretty",
+		"html:target/htmlReports/report.html",
 		"json:target/jsonReports/report.json",
-		"junit:target/junitReports/report.xml"
-})
+		"junit:target/junitReports/report.xml",
+        "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+        "timeline:target/"
+   })
 public class TestRunner {
 
 	
