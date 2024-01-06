@@ -23,7 +23,7 @@ public class LoginPageSteps extends BaseClass {
 			
 			 LoginPagePom loginpagepom=new LoginPagePom(driver);
 	         loginpagepom.click_Signin();
-	         LoggerLoad.info("ti******tle of page " + driver.getTitle() + " on signin page");
+	         //LoggerLoad.info("ti******tle of page " + driver.getTitle() + " on signin page");
 		   
 		}
 
