@@ -37,7 +37,7 @@ public class BaseClass {
     	
 
 
-    	//WebDriverManager.chromedriver().setup();
+    	WebDriverManager.chromedriver().setup();
     	driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
