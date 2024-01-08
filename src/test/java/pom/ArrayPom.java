@@ -140,8 +140,7 @@ public void getstarted() {
 		 
 	      answer.sendKeys(cellValuesList.get(0));
 		 
-	       
-
+	       System.out.println(cellValuesList.get(0));
 
 	}
 	}

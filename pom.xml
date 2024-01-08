@@ -41,7 +41,7 @@
 <dependency>
    <groupId>io.qameta.allure</groupId>
    <artifactId>allure-testng</artifactId>
-   <version>2.24.0</version>
+   <version>2.25.0</version>
    </dependency>
 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 <dependency>
@@ -86,12 +86,6 @@
    <artifactId>poi-ooxml</artifactId>
    <version>5.2.5</version>
 </dependency>
- <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
-<dependency>
-   <groupId>tech.grasshopper</groupId>
-   <artifactId>extentreports-cucumber7-adapter</artifactId>
-   <version>1.14.0</version>
-</dependency>
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
    <groupId>com.aventstack</groupId>
@@ -113,11 +107,18 @@
    <scope>runtime</scope>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.14.0</version>
+</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 <dependency>
       <groupId>org.apache.maven.plugins</groupId>
    <artifactId>maven-surefire-plugin</artifactId>
-   <version>3.2.2</version>
+   <version>3.2.3</version>
 </dependency>
 <dependency>
 <groupId>org.junit.jupiter</groupId>
@@ -136,12 +137,15 @@
        </plugin>
     <plugin>
     <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
+    <artifactId>maven-failsafe-plugin</artifactId>
     <version>3.2.3</version>
     <configuration>
-      <includes>**/*TestRunner.java</includes>
+     <includes>
+		 <include>**/*TestRunner.java</include>
+	</includes>
         <parallel>methods</parallel>
-        <useUnlimitedThreads>true</useUnlimitedThreads>
+        <threadCount>4</threadCount>
+         <perCoreThreadCount>true</perCoreThreadCount>
     </configuration>
 
    </plugin>

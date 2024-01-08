@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -36,7 +37,11 @@ public class BaseClass {
     public static void launchApp() {
     	
     	WebDriverManager.chromedriver().setup();
-    	driver = new ChromeDriver();
+    	ChromeOptions options= new ChromeOptions();
+    	options.addArguments("--headless");
+    	driver = new ChromeDriver(options);
+    	//WebDriverManager.firefoxdriver().setup();
+    	//driver= new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));

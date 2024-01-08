@@ -15,10 +15,11 @@ plugin= {"pretty",
 		"html:target/htmlReports/report.html",
 		"json:target/jsonReports/report.json",
 		"junit:target/junitReports/report.xml",
-        "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+      "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-        "timeline:target/"
-   })
+       "timeline:target/timeline"
+        
+        })
 public class TestRunner {
 
 	
