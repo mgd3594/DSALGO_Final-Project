@@ -35,8 +35,6 @@ public class BaseClass {
 
     public static void launchApp() {
     	
-
-
     	WebDriverManager.chromedriver().setup();
     	driver = new ChromeDriver();
         driver.manage().window().maximize();
